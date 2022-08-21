@@ -27,38 +27,3 @@ export const setDataInLocalStorage = (key, data) => {
   const json_data = JSON.stringify(data)
   localStorage.setItem(key, json_data)
 }
-
-export const checkDevice = {
-  screenOrientation: function () {
-    if (window.matchMedia("(orientation:landscape)").matches) {
-      return "landscape"
-    } else {
-      return "portrait"
-    }
-  },
-  screenType: function () {
-    if (window.innerWidth <= 480) {
-      return "xs"
-    } else if (window.innerWidth <= 768) {
-      return "sm"
-    } else if (window.innerWidth <= 992) {
-      return "md"
-    } else if (window.innerWidth <= 1200) {
-      return "lg"
-    } else if (window.innerWidth <= 1600) {
-      return "hd"
-    } else if (window.innerWidth <= 2560) {
-      return "fhd"
-    } else {
-      return "uhd"
-    }
-  },
-  deviceStatus: function () {
-    return {
-      screenWidth: window.innerWidth,
-      screenHeight: window.innerHeight,
-      screenOrientation: this.screenOrientation(),
-      screenType: this.screenType(),
-    }
-  },
-}

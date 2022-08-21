@@ -11,18 +11,10 @@ export const APP_PAGE = {
 }
 
 export const LOCAL_STORAGE = {
-  IS_DARK_THEME: "is_dark_theme",
+  IS_DARK_THEME: "isDarkTheme",
 }
 
 export const THEME_TYPE = {
   DARK: "dark",
   LIGHT: "light",
 }
-
-// export const METHOD_TYPES = {
-//   GET: 'GET',
-//   POST: 'POST',
-//   DELETE: 'DELETE',
-//   PUT: 'PUT',
-//   PATCH: 'PATCH'
-// }
