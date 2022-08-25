@@ -27,3 +27,5 @@ export const setDataInLocalStorage = (key, data) => {
   const json_data = JSON.stringify(data)
   localStorage.setItem(key, json_data)
 }
+
+export const preventDefault = (event) => event.preventDefault()

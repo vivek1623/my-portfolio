@@ -1,4 +1,4 @@
-import { cyan, purple, blueGrey } from "@mui/material/colors"
+import { cyan, purple, yellow, blueGrey } from "@mui/material/colors"
 
 const theme = {
   palette: {
@@ -8,6 +8,9 @@ const theme = {
     },
     secondary: {
       main: cyan["400"],
+    },
+    warning: {
+      main: yellow["600"],
     },
     background: {
       default: blueGrey["900"],

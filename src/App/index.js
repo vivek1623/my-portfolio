@@ -11,8 +11,9 @@ import {
 } from "../data/config/utils"
 
 import { ThemeModeContext } from "../data/config/context"
-
 import themeConfig from "../data/theme"
+
+import AppNavbar from "../components/AppNavbar"
 
 const Home = lazy(() => import("../App/Home"))
 const About = lazy(() => import("../App/About"))
@@ -24,9 +25,9 @@ const themeType = getDataFromLocalStorage(LOCAL_STORAGE.THEME, THEME_TYPE.LIGHT)
 const App = () => {
   const [themeMode, setThemeMode] = useState(themeType)
 
-  const themeHandle = useMemo(
+  const themeHandler = useMemo(
     () => ({
-      toggleThemeMode: (mode) => {
+      changeThemeMode: (mode) => {
         if (mode) {
           setThemeMode(mode)
           setDataInLocalStorage(LOCAL_STORAGE.THEME, mode)
@@ -38,21 +39,23 @@ const App = () => {
   const theme = useMemo(() => createTheme(themeConfig[themeMode]), [themeMode])
 
   return (
-    <ThemeModeContext.Provider value={themeHandle}>
+    <ThemeModeContext.Provider value={themeHandler}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Box>
+
+        <Router>
+          <AppNavbar />
           <Suspense fallback={null}>
-            <Router>
+            <Box sx={{ my: 8 }}>
               <Routes>
                 <Route index path={ROUTE_PATH.HOME} element={<Home />} />
                 <Route path={ROUTE_PATH.PORTFOLIO} element={<Portfolio />} />
                 <Route path={ROUTE_PATH.ABOUT} element={<About />} />
                 <Route path="*" element={<PageNotFound />} />
               </Routes>
-            </Router>
+            </Box>
           </Suspense>
-        </Box>
+        </Router>
       </ThemeProvider>
     </ThemeModeContext.Provider>
   )
