@@ -12,7 +12,7 @@ import Brightness7Icon from "@mui/icons-material/Brightness7"
 import { NAV_BAR, THEME_TYPE } from "../../data/config/constants"
 import { ThemeModeContext } from "../../data/config/context"
 
-const AppNavBar = (darkMode) => {
+const AppNavBar = () => {
   const theme = useTheme()
   const location = useLocation()
   const themeHandler = useContext(ThemeModeContext)
@@ -31,7 +31,12 @@ const AppNavBar = (darkMode) => {
                   color="inherit"
                   underline="none"
                 >
-                  <img style={{ width: "70px" }} src={item.logo} alt="Vv" />
+                  <Box
+                    component="img"
+                    width={{ xs: "60px", md: "70px" }}
+                    src={item.logo}
+                    alt="Vv"
+                  />
                 </Link>
               </Box>
             )
@@ -39,7 +44,7 @@ const AppNavBar = (darkMode) => {
             <Box
               key={index}
               component="nav"
-              py={1}
+              py={0.5}
               mx={{ xs: 2, sm: 4, md: 8 }}
               sx={
                 location.pathname === item.route
@@ -49,7 +54,7 @@ const AppNavBar = (darkMode) => {
                       borderBottom: 5,
                       borderImageSlice: 1,
                       borderImageSource: (theme) =>
-                        `-webkit-linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
+                        `-webkit-linear-gradient(139deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
                       "&:hover": {
                         opacity: 0.5,
                         transition: "all 250ms ease",
