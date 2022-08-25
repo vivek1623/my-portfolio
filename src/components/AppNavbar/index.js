@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link as RouterLink, useLocation } from "react-router-dom"
 import { useTheme } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import AppBar from "@mui/material/AppBar"
@@ -7,7 +8,6 @@ import Link from "@mui/material/Link"
 import IconButton from "@mui/material/IconButton"
 import Brightness4Icon from "@mui/icons-material/Brightness4"
 import Brightness7Icon from "@mui/icons-material/Brightness7"
-import { Link as RouterLink, useLocation } from "react-router-dom"
 
 import { NAV_BAR, THEME_TYPE } from "../../data/config/constants"
 import { ThemeModeContext } from "../../data/config/context"
@@ -19,12 +19,12 @@ const AppNavBar = (darkMode) => {
   console.log("location", location, theme.palette.mode)
 
   return (
-    <AppBar position="fixed" color="transparent" elevation={0}>
+    <AppBar position="static" color="transparent" elevation={0}>
       <Toolbar sx={{ justifyContent: "center" }}>
         {NAV_BAR.map((item, index) => {
           if (item.logo)
             return (
-              <Box key={index} component="nav" mx={{ xs: 2, sm: 4, md: 8 }}>
+              <Box key={index} component="nav" mx={{ xs: 1, sm: 6, md: 10 }}>
                 <Link
                   component={RouterLink}
                   to={item.route}
@@ -70,6 +70,7 @@ const AppNavBar = (darkMode) => {
                 to={item.route}
                 color="inherit"
                 underline="none"
+                fontWeight={500}
               >
                 {item.name}
               </Link>
@@ -89,7 +90,7 @@ const AppNavBar = (darkMode) => {
             },
           }}
         >
-          <IconButton>
+          <IconButton color="inherit">
             {theme.palette.mode === THEME_TYPE.DARK ? (
               <Brightness7Icon
                 color="warning"

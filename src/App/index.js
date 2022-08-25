@@ -3,6 +3,8 @@ import { Routes, Route, BrowserRouter as Router } from "react-router-dom"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 import Box from "@mui/material/Box"
+import Typography from "@mui/material/Typography"
+import Link from "@mui/material/Link"
 
 import { LOCAL_STORAGE, THEME_TYPE, ROUTE_PATH } from "../data/config/constants"
 import {
@@ -42,19 +44,30 @@ const App = () => {
     <ThemeModeContext.Provider value={themeHandler}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-
         <Router>
-          <AppNavbar />
-          <Suspense fallback={null}>
-            <Box sx={{ my: 8 }}>
-              <Routes>
-                <Route index path={ROUTE_PATH.HOME} element={<Home />} />
-                <Route path={ROUTE_PATH.PORTFOLIO} element={<Portfolio />} />
-                <Route path={ROUTE_PATH.ABOUT} element={<About />} />
-                <Route path="*" element={<PageNotFound />} />
-              </Routes>
+          <Box display="flex" flexDirection="column" minHeight="100vh">
+            <AppNavbar />
+            <Box flexGrow={1}>
+              <Suspense fallback={null}>
+                <Routes>
+                  <Route index path={ROUTE_PATH.HOME} element={<Home />} />
+                  <Route path={ROUTE_PATH.PORTFOLIO} element={<Portfolio />} />
+                  <Route path={ROUTE_PATH.ABOUT} element={<About />} />
+                  <Route path="*" element={<PageNotFound />} />
+                </Routes>
+              </Suspense>
             </Box>
-          </Suspense>
+            <Typography
+              align="center"
+              my={1}
+              sx={{ color: "text.secondary", fontSize: "0.75rem" }}
+            >
+              created with &hearts; by{" "}
+              <Link href="#" color="inherit" underline="hover">
+                Vivek Vaibhav
+              </Link>
+            </Typography>
+          </Box>
         </Router>
       </ThemeProvider>
     </ThemeModeContext.Provider>

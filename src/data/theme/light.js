@@ -1,5 +1,7 @@
 import { cyan, purple } from "@mui/material/colors"
 
+const dark = "#1f1f1f"
+
 const theme = {
   palette: {
     primary: {
@@ -8,6 +10,9 @@ const theme = {
     secondary: {
       main: cyan["400"],
     },
+    text: {
+      primary: dark
+    }
   },
 }
 

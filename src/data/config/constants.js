@@ -7,7 +7,7 @@ export const ROUTE_PATH = {
 export const APP_PAGE = {
   HOME: "Home",
   PORTFOLIO: "Portfolio",
-  ABOUT: "About me",
+  ABOUT: "About",
 }
 
 export const THEME_TYPE = {
