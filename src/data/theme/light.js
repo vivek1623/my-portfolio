@@ -1,13 +1,12 @@
-const primaryMain = "#fc00ff"
-const secondaryMain = "#59cbf7"
+import { cyan, purple } from "@mui/material/colors"
 
 const theme = {
   palette: {
     primary: {
-      main: primaryMain,
+      main: purple["A400"],
     },
     secondary: {
-      main: secondaryMain,
+      main: cyan["400"],
     },
   },
 }

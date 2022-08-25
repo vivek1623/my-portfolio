@@ -1,18 +1,16 @@
-const primaryMain = "#fc00ff"
-const secondaryMain = "#59cbf7"
-const backgroundDefault = "#1f1f1f"
+import { cyan, purple, blueGrey } from "@mui/material/colors"
 
 const theme = {
   palette: {
-    type: "dark",
+    mode: "dark",
     primary: {
-      main: primaryMain,
+      main: purple["A400"],
     },
     secondary: {
-      main: secondaryMain,
+      main: cyan["400"],
     },
     background: {
-      default: backgroundDefault,
+      default: blueGrey["900"],
     },
   },
 }

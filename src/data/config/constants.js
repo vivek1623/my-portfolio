@@ -10,11 +10,11 @@ export const APP_PAGE = {
   ABOUT: "About",
 }
 
-export const LOCAL_STORAGE = {
-  IS_DARK_THEME: "isDarkTheme",
-}
-
 export const THEME_TYPE = {
   DARK: "dark",
   LIGHT: "light",
+}
+
+export const LOCAL_STORAGE = {
+  THEME: "portfolioTheme",
 }
