@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import IconButton from "@mui/material/IconButton"
-import { INFO } from "../../data/config/constants"
+import { HOME } from "../../data/config/info"
 
 import { IMG_PROFILE } from "../../data/assets"
 
@@ -45,7 +45,7 @@ const Home = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            {INFO.firstName}
+            {HOME.firstName}
           </Typography>
           <Typography
             variant="inherit"
@@ -73,10 +73,10 @@ const Home = () => {
           </Typography>
         </Typography>
         <Typography variant="h4" fontWeight={600}>
-          {INFO.subheading}
+          {HOME.subheading}
         </Typography>
         <Box p={2}>
-          {INFO.bio.map((item, index) => (
+          {HOME.bio.map((item, index) => (
             <Box
               fontSize="1rem"
               lineHeight={1.5}
@@ -102,7 +102,7 @@ const Home = () => {
             </Box>
           ))}
         </Box>
-        {INFO.socials.map((social, index) => (
+        {HOME.socials.map((social, index) => (
           <IconButton
             key={index}
             aria-label={social.label}

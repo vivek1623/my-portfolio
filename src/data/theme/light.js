@@ -11,8 +11,8 @@ const theme = {
       main: cyan["400"],
     },
     text: {
-      primary: dark
-    }
+      primary: dark,
+    },
   },
 }
 
