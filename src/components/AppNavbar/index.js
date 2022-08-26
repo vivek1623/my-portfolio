@@ -16,7 +16,6 @@ const AppNavBar = () => {
   const theme = useTheme()
   const location = useLocation()
   const themeHandler = useContext(ThemeModeContext)
-  console.log("location", location, theme.palette.mode)
 
   return (
     <AppBar position="static" color="transparent" elevation={0}>
@@ -24,19 +23,31 @@ const AppNavBar = () => {
         {NAV_BAR.map((item, index) => {
           if (item.logo)
             return (
-              <Box key={index} component="nav" mx={{ xs: 1, sm: 6, md: 10 }}>
+              <Box
+                key={index}
+                component="nav"
+                mx={{ xs: 1, sm: 6, md: 10 }}
+                sx={{
+                  transition: "all 250ms ease",
+                  "&:hover": {
+                    opacity: 0.5,
+                    transition: "all 250ms ease",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              >
                 <Link
                   component={RouterLink}
                   to={item.route}
                   color="inherit"
                   underline="none"
+                  sx={{
+                    fontSize: "3rem",
+                    fontWeight: 600,
+                    lineHeight: 1.2,
+                  }}
                 >
-                  <Box
-                    component="img"
-                    width={{ xs: "60px", md: "70px" }}
-                    src={item.logo}
-                    alt="Vv"
-                  />
+                  V
                 </Link>
               </Box>
             )
@@ -44,8 +55,10 @@ const AppNavBar = () => {
             <Box
               key={index}
               component="nav"
-              py={0.5}
-              mx={{ xs: 2, sm: 4, md: 8 }}
+              pt={1}
+              pb={0.5}
+              mx={{ xs: 1.5, sm: 4, md: 8 }}
+              alignSelf="baseline"
               sx={
                 location.pathname === item.route
                   ? {
@@ -84,7 +97,9 @@ const AppNavBar = () => {
         })}
         <Box
           component="nav"
-          mx={{ xs: 2, sm: 4, md: 8 }}
+          alignSelf="baseline"
+          pt={1}
+          mx={{ xs: 1.5, sm: 4, md: 8 }}
           sx={{
             cursor: "pointer",
             transition: "all 250ms ease",
@@ -95,19 +110,21 @@ const AppNavBar = () => {
             },
           }}
         >
-          <IconButton color="inherit">
-            {theme.palette.mode === THEME_TYPE.DARK ? (
-              <Brightness7Icon
-                color="warning"
-                onClick={() => themeHandler.changeThemeMode(THEME_TYPE.LIGHT)}
-              />
-            ) : (
-              <Brightness4Icon
-                color="inherit"
-                onClick={() => themeHandler.changeThemeMode(THEME_TYPE.DARK)}
-              />
-            )}
-          </IconButton>
+          {theme.palette.mode === THEME_TYPE.DARK ? (
+            <IconButton
+              color="inherit"
+              onClick={() => themeHandler.changeThemeMode(THEME_TYPE.LIGHT)}
+            >
+              <Brightness7Icon color="warning" />
+            </IconButton>
+          ) : (
+            <IconButton
+              color="inherit"
+              onClick={() => themeHandler.changeThemeMode(THEME_TYPE.DARK)}
+            >
+              <Brightness4Icon color="inherit" />
+            </IconButton>
+          )}
         </Box>
       </Toolbar>
     </AppBar>

@@ -3,6 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import TwitterIcon from "@mui/icons-material/Twitter"
+import { IMG_PROJECT1} from "../assets"
 
 export const HOME = {
   firstName: "Vivek",
@@ -96,33 +97,34 @@ export const ABOUT = [
 
 export const PORTFOLIO = [
   {
-    title: "Project 1",
+    title: "RentoHub",
+    description: "A vehicle booking application implemented using ReactJS & NodeJS",
     deployedUrl: "https://paytonpierce.dev",
     repo: "https://github.com/paytonjewell",
-    // image: mock1,
+    image: IMG_PROJECT1
   },
   {
     title: "Project 2",
     deployedUrl: "https://paytonpierce.dev",
     repo: "https://github.com/paytonjewell",
-    // image: mock2,
+    image: IMG_PROJECT1,
   },
   {
     title: "Project 3",
     deployedUrl: "https://paytonpierce.dev",
     repo: "https://github.com/paytonjewell",
-    // image: mock3,
+    image: IMG_PROJECT1,
   },
   {
     title: "Project 4",
     deployedUrl: "https://paytonpierce.dev",
     repo: "https://github.com/paytonjewell",
-    // image: mock4,
+    image: IMG_PROJECT1,
   },
   {
     title: "Project 5",
     deployedUrl: "https://paytonpierce.dev",
     repo: "https://github.com/paytonjewell",
-    // image: mock5,
+    image: IMG_PROJECT1,
   },
 ]

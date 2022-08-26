@@ -29,7 +29,7 @@ export const NAV_BAR = [
     route: ROUTE_PATH.ABOUT,
   },
   {
-    logo: require("../assets/img/logo.png"),
+    logo: true,
     route: ROUTE_PATH.HOME,
   },
   {
