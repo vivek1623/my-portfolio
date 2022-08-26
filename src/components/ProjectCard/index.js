@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import Stack from "@mui/material/Stack"
@@ -40,6 +41,14 @@ const ProjectCard = ({ project }) => {
       </Stack>
     </Box>
   )
+}
+
+ProjectCard.propTypes = {
+  project: PropTypes.object,
+}
+
+ProjectCard.defaultProps = {
+  project: {},
 }
 
 export default ProjectCard

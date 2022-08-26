@@ -1,8 +1,8 @@
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import IconButton from "@mui/material/IconButton"
-import { HOME } from "../../data/config/info"
 
+import { HOME } from "../../data/config/info"
 import { IMG_PROFILE } from "../../data/assets"
 
 const Home = () => {
@@ -78,6 +78,7 @@ const Home = () => {
         <Box p={2}>
           {HOME.bio.map((item, index) => (
             <Box
+              key={index}
               fontSize="1rem"
               lineHeight={1.5}
               sx={{

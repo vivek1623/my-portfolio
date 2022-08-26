@@ -3,11 +3,13 @@ import GitHubIcon from "@mui/icons-material/GitHub"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import TwitterIcon from "@mui/icons-material/Twitter"
-import { IMG_PROJECT1} from "../assets"
+
+import { IMG_PROJECT1 } from "../assets"
 
 export const HOME = {
   firstName: "Vivek",
   lastName: "Vaibhav",
+  logoCharacters: "V",
   subheading: "I'm a Full Stack Developer",
   bio: [
     {
@@ -98,10 +100,11 @@ export const ABOUT = [
 export const PORTFOLIO = [
   {
     title: "RentoHub",
-    description: "A vehicle booking application implemented using ReactJS & NodeJS",
+    description:
+      "A vehicle booking application implemented using ReactJS & NodeJS",
     deployedUrl: "https://paytonpierce.dev",
     repo: "https://github.com/paytonjewell",
-    image: IMG_PROJECT1
+    image: IMG_PROJECT1,
   },
   {
     title: "Project 2",

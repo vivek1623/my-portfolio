@@ -1,9 +1,9 @@
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 
-import Terminal from "../../components/Terminal"
-
 import { ABOUT } from "../../data/config/info"
+
+import Terminal from "../../components/Terminal"
 
 const About = () => {
   return (

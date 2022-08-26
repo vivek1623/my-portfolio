@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import { green, yellow, red, grey } from "@mui/material/colors"
@@ -60,6 +61,19 @@ function Terminal({ children, title }) {
       </Box>
     </Box>
   )
+}
+
+Terminal.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+}
+
+Terminal.defaultProps = {
+  title: "",
+  children: null,
 }
 
 export default Terminal

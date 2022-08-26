@@ -10,6 +10,7 @@ import Brightness4Icon from "@mui/icons-material/Brightness4"
 import Brightness7Icon from "@mui/icons-material/Brightness7"
 
 import { NAV_BAR, THEME_TYPE } from "../../data/config/constants"
+import { HOME } from "../../data/config/info"
 import { ThemeModeContext } from "../../data/config/context"
 
 const AppNavBar = () => {
@@ -42,12 +43,12 @@ const AppNavBar = () => {
                   color="inherit"
                   underline="none"
                   sx={{
-                    fontSize: "3rem",
+                    fontSize: { xs: "2rem", sm: "3.5rem" },
                     fontWeight: 600,
                     lineHeight: 1.2,
                   }}
                 >
-                  V
+                  {HOME.logoCharacters}
                 </Link>
               </Box>
             )
