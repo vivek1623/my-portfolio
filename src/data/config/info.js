@@ -132,9 +132,17 @@ export const PORTFOLIO = [
     title: "RentoHub",
     description:
       "A vehicle booking application implemented using ReactJS & NodeJS",
-    deployedUrl: "https://paytonpierce.dev",
-    repo: "https://github.com/paytonjewell",
+    deployedUrl: "#",
+    repo: "#",
     tags: ["ReactJS", "NodeJS", "Ant-Design"],
+    image: IMG_PROJECT1,
+  },
+  {
+    title: "PicSearch",
+    description: "A web application to search any image",
+    deployedUrl: "https://vivek1623.github.io/pic-search",
+    repo: "https://github.com/vivek1623/pic-search",
+    tags: ["ReactJS", "Ant-Design"],
     image: IMG_PROJECT1,
   },
 ]
