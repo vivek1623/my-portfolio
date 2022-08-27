@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import Stack from "@mui/material/Stack"
+import Chip from "@mui/material/Chip"
 import Button from "@mui/material/Button"
 import CodeIcon from "@mui/icons-material/Code"
 import ExploreIcon from "@mui/icons-material/Explore"
@@ -20,7 +21,14 @@ const ProjectCard = ({ project }) => {
       <Typography variant="h4" fontWeight={600}>
         {project.title}
       </Typography>
-      <Typography color="text.secondary">{project.description}</Typography>
+      <Typography align="center" color="text.secondary" mx={2}>{project.description}</Typography>
+      {project.tags?.length > 0 && (
+        <Stack direction="row" spacing={1} mt={3}>
+          {project.tags.map((tag, index) => (
+            <Chip key={index} label={tag} variant="outlined" />
+          ))}
+        </Stack>
+      )}
       <Stack direction={{ xs: "column", sm: "row" }} mt={3} spacing={2}>
         <Button
           color="inherit"

@@ -62,30 +62,52 @@ export const ABOUT = [
   {
     title: "introduction",
     data: [
-      { primary: "vivek $", secondary: "cat aboutvivek" },
+      { primary: "vivek $", secondary: "cat about-vivek" },
       {
-        primary: "aboutvivek (main) $",
+        primary: "about-vivek (main) $",
         secondary:
-          "Hello! I'm Vivek. I'm a Full Stack Developer in Oriserve. I studied CompScience at NIT Calicut.",
+          "Hello! I'm Vivek. I'm a Full Stack Developer in Oriserve. I studied Computer Science and Engineering at NIT Calicut.",
       },
     ],
   },
   {
-    title: "skills-and-tools",
+    title: "career-objective",
     data: [
-      { primary: "vivek $", secondary: "cd skills/tools" },
+      { primary: "vivek $", secondary: "cd ../career-objective" },
+      {
+        primary: "career-objective (main) $",
+        secondary:
+          "I want to put to use my creative skills, technologies that I am familiar with, innovative thoughts that will benefit the Organization in the long run and also help me in building my professional career",
+      },
+    ],
+  },
+  {
+    title: "skills/tools",
+    data: [
+      { primary: "vivek $", secondary: "cd ../skills/tools" },
       { primary: "skills/tools (main) $", secondary: "ls" },
       { primary: "Proficient With" },
       { secondary: "ReactJs" },
       { secondary: "Redux" },
+      { secondary: "ReactNative" },
       { secondary: "NodeJs" },
       { secondary: "HTML" },
+      { secondary: "CSS" },
       { primary: "Exposed To" },
       { secondary: "Redis" },
     ],
   },
   {
-    title: "hobbies-and-interests",
+    title: "experience",
+    data: [
+      { primary: "vivek $", secondary: "cd ../experience" },
+      { primary: "experience (main) $", secondary: "ls" },
+      { primary: "ORI Serve", secondary: "March 2018 - present" },
+      { primary: "Pole Tech Lab", secondary: "July 2016 - March 2018" },
+    ],
+  },
+  {
+    title: "hobbies/interests",
     data: [
       { primary: "vivek $", secondary: "cd hobbies/interests" },
       { primary: "hobbies/interests (main) $", secondary: "ls" },
@@ -102,6 +124,7 @@ export const PORTFOLIO = [
     title: "RentoHub",
     description:
       "A vehicle booking application implemented using ReactJS & NodeJS",
+    tags: ["ReactJS", "NodeJS", "Ant-Design"],
     deployedUrl: "https://paytonpierce.dev",
     repo: "https://github.com/paytonjewell",
     image: IMG_PROJECT1,
