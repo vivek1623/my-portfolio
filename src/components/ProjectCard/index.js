@@ -21,7 +21,9 @@ const ProjectCard = ({ project }) => {
       <Typography variant="h4" fontWeight={600}>
         {project.title}
       </Typography>
-      <Typography align="center" color="text.secondary" mx={2}>{project.description}</Typography>
+      <Typography align="center" color="text.secondary" mx={2}>
+        {project.description}
+      </Typography>
       {project.tags?.length > 0 && (
         <Stack direction="row" spacing={1} mt={3}>
           {project.tags.map((tag, index) => (
@@ -35,6 +37,8 @@ const ProjectCard = ({ project }) => {
           variant="outlined"
           startIcon={<ExploreIcon />}
           href={project.deployedUrl}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           LIVE DEMO
         </Button>
@@ -43,6 +47,8 @@ const ProjectCard = ({ project }) => {
           variant="outlined"
           startIcon={<CodeIcon />}
           href={project.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           SOURCE CODE
         </Button>

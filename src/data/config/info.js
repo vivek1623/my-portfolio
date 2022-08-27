@@ -121,36 +121,20 @@ export const ABOUT = [
 
 export const PORTFOLIO = [
   {
+    title: "My Portfolio",
+    description: "A simple portfolio to show my basic information",
+    deployedUrl: "https://vivek1623.github.io/my-portfolio",
+    repo: "https://github.com/vivek1623/my-portfolio",
+    tags: ["ReactJS", "Material UI"],
+    image: IMG_PROJECT1,
+  },
+  {
     title: "RentoHub",
     description:
       "A vehicle booking application implemented using ReactJS & NodeJS",
+    deployedUrl: "https://paytonpierce.dev",
+    repo: "https://github.com/paytonjewell",
     tags: ["ReactJS", "NodeJS", "Ant-Design"],
-    deployedUrl: "https://paytonpierce.dev",
-    repo: "https://github.com/paytonjewell",
-    image: IMG_PROJECT1,
-  },
-  {
-    title: "Project 2",
-    deployedUrl: "https://paytonpierce.dev",
-    repo: "https://github.com/paytonjewell",
-    image: IMG_PROJECT1,
-  },
-  {
-    title: "Project 3",
-    deployedUrl: "https://paytonpierce.dev",
-    repo: "https://github.com/paytonjewell",
-    image: IMG_PROJECT1,
-  },
-  {
-    title: "Project 4",
-    deployedUrl: "https://paytonpierce.dev",
-    repo: "https://github.com/paytonjewell",
-    image: IMG_PROJECT1,
-  },
-  {
-    title: "Project 5",
-    deployedUrl: "https://paytonpierce.dev",
-    repo: "https://github.com/paytonjewell",
     image: IMG_PROJECT1,
   },
 ]
