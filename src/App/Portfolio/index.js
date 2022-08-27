@@ -8,7 +8,7 @@ import ProjectCard from "../../components/ProjectCard"
 
 const Portfolio = () => {
   useEffect(() => {
-    document.title = APP_PAGE.HOME
+    document.title = APP_PAGE.PORTFOLIO
   }, [])
 
   return (
