@@ -131,7 +131,7 @@ export const PORTFOLIO = [
   {
     title: "RentoHub",
     description:
-      "A vehicle booking application implemented using ReactJS & NodeJS",
+      "A vehicle Rental application, which provide user to book bike on rent.",
     deployedUrl: "https://rento-hub-fe.vercel.app/",
     repo: "https://github.com/vivek1623/rento-hub-fe",
     tags: ["ReactJS", "NodeJS", "Ant-Design"],
