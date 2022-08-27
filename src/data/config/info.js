@@ -138,6 +138,14 @@ export const PORTFOLIO = [
     image: IMG_PROJECT1,
   },
   {
+    title: "GupSup Now",
+    description: "A real-time group messaging application",
+    deployedUrl: "https://gupsupnow.herokuapp.com/",
+    repo: "https://github.com/vivek1623/gupsup-now",
+    tags: ["NodeJS", "Socket.io"],
+    image: IMG_PROJECT1,
+  },
+  {
     title: "PicSearch",
     description: "A web application to search any image",
     deployedUrl: "https://vivek1623.github.io/pic-search",
