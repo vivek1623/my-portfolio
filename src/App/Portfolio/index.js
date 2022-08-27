@@ -1,10 +1,16 @@
+import { useEffect } from "react"
 import Grid from "@mui/material/Grid"
 
 import { PORTFOLIO } from "../../data/config/info"
+import { APP_PAGE } from "../../data/config/constants"
 
 import ProjectCard from "../../components/ProjectCard"
 
 const Portfolio = () => {
+  useEffect(() => {
+    document.title = APP_PAGE.HOME
+  }, [])
+
   return (
     <Grid container display="flex" justifyContent="center">
       {PORTFOLIO.map((project, index) => (

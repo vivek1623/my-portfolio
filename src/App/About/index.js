@@ -1,11 +1,17 @@
+import { useEffect } from "react"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 
 import { ABOUT } from "../../data/config/info"
+import { APP_PAGE } from "../../data/config/constants"
 
 import Terminal from "../../components/Terminal"
 
 const About = () => {
+  useEffect(() => {
+    document.title = APP_PAGE.ABOUT
+  }, [])
+  
   return (
     <Box
       p={2}

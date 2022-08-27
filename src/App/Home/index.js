@@ -1,11 +1,17 @@
+import { useEffect } from "react"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import IconButton from "@mui/material/IconButton"
 
+import { APP_PAGE } from "../../data/config/constants"
 import { HOME } from "../../data/config/info"
 import { IMG_PROFILE } from "../../data/assets"
 
 const Home = () => {
+  useEffect(() => {
+    document.title = APP_PAGE.HOME
+  }, [])
+
   return (
     <Box
       component="main"
