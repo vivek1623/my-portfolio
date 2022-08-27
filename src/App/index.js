@@ -49,10 +49,20 @@ const App = () => {
         <Router>
           <Box display="flex" flexDirection="column" minHeight="100vh">
             <AppNavbar />
-            <Box flexGrow={1}>
+            <Box flexGrow={1} position="relative">
               <Suspense
                 fallback={
-                  <Box p={10} display="flex" justifyContent="center">
+                  <Box
+                    p={10}
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    position="absolute"
+                    top="0"
+                    bottom="0"
+                    left="0"
+                    right="0"
+                  >
                     <CircularProgress />
                   </Box>
                 }
