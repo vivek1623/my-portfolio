@@ -1,5 +1,10 @@
 import { lazy, Suspense, useState, useMemo } from "react"
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom"
+import {
+  Routes,
+  Route,
+  BrowserRouter as Router,
+  Navigate,
+} from "react-router-dom"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 import Box from "@mui/material/Box"
@@ -58,6 +63,10 @@ const App = () => {
                 }
               >
                 <Routes>
+                  <Route
+                    path="/"
+                    element={<Navigate replace to={ROUTE_PATH.HOME} />}
+                  />
                   <Route index path={ROUTE_PATH.HOME} element={<Home />} />
                   <Route path={ROUTE_PATH.PORTFOLIO} element={<Portfolio />} />
                   <Route path={ROUTE_PATH.ABOUT} element={<About />} />
