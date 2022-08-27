@@ -1,13 +1,13 @@
-import { cyan, purple, yellow, blueGrey } from "@mui/material/colors"
+import { cyan, deepPurple, yellow, blueGrey } from "@mui/material/colors"
 
 const theme = {
   palette: {
     mode: "dark",
     primary: {
-      main: purple["A400"],
+      main: cyan["A400"],
     },
     secondary: {
-      main: cyan["400"],
+      main: deepPurple["A400"],
     },
     warning: {
       main: yellow["600"],

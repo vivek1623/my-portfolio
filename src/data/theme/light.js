@@ -5,10 +5,10 @@ const dark = "#1f1f1f"
 const theme = {
   palette: {
     primary: {
-      main: purple["A400"],
+      main: cyan["A400"],
     },
     secondary: {
-      main: cyan["400"],
+      main: purple["A700"],
     },
     text: {
       primary: dark,
