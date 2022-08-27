@@ -4,6 +4,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
+import CircularProgress from "@mui/material/CircularProgress"
+
 import Link from "@mui/material/Link"
 
 import { LOCAL_STORAGE, THEME_TYPE, ROUTE_PATH } from "../data/config/constants"
@@ -48,7 +50,13 @@ const App = () => {
           <Box display="flex" flexDirection="column" minHeight="100vh">
             <AppNavbar />
             <Box flexGrow={1}>
-              <Suspense fallback={null}>
+              <Suspense
+                fallback={
+                  <Box p={10} display="flex" justifyContent="center">
+                    <CircularProgress />
+                  </Box>
+                }
+              >
                 <Routes>
                   <Route index path={ROUTE_PATH.HOME} element={<Home />} />
                   <Route path={ROUTE_PATH.PORTFOLIO} element={<Portfolio />} />
