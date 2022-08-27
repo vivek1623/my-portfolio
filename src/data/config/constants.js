@@ -1,8 +1,7 @@
 export const ROUTE_PATH = {
-  BASE: "/",
-  HOME: "/my-portfolio",
-  PORTFOLIO: "/my-portfolio/projects",
-  ABOUT: "/my-portfolio/about-me",
+  HOME: "/",
+  PORTFOLIO: "/projects",
+  ABOUT: "/about-me",
 }
 
 export const APP_PAGE = {

@@ -63,10 +63,6 @@ const App = () => {
                 }
               >
                 <Routes>
-                  <Route
-                    path="/"
-                    element={<Navigate replace to={ROUTE_PATH.HOME} />}
-                  />
                   <Route index path={ROUTE_PATH.HOME} element={<Home />} />
                   <Route path={ROUTE_PATH.PORTFOLIO} element={<Portfolio />} />
                   <Route path={ROUTE_PATH.ABOUT} element={<About />} />
