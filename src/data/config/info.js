@@ -123,7 +123,7 @@ export const PORTFOLIO = [
   {
     title: "My Portfolio",
     description: "A simple portfolio to show my basic information",
-    deployedUrl: "https://my-portfolio-navy-seven.vercel.app",
+    deployedUrl: "https://my-portfolio-vivek23.vercel.app",
     repo: "https://github.com/vivek1623/my-portfolio",
     tags: ["ReactJS", "Material UI"],
     image: IMG_PROJECT1,
