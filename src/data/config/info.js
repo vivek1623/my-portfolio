@@ -4,7 +4,7 @@ import InstagramIcon from "@mui/icons-material/Instagram"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import TwitterIcon from "@mui/icons-material/Twitter"
 
-import { IMG_PROJECT1 } from "../assets"
+import { IMG_PROJECT1, IMG_PROJECT2, IMG_PROJECT3, IMG_PROJECT4 } from "../assets"
 
 export const HOME = {
   firstName: "Vivek",
@@ -135,7 +135,7 @@ export const PORTFOLIO = [
     deployedUrl: "https://rento-hub-fe.vercel.app/",
     repo: "https://github.com/vivek1623/rento-hub-fe",
     tags: ["ReactJS", "NodeJS", "Ant-Design"],
-    image: IMG_PROJECT1,
+    image: IMG_PROJECT2,
   },
   {
     title: "GupSup Now",
@@ -143,7 +143,7 @@ export const PORTFOLIO = [
     deployedUrl: "https://gupsupnow.herokuapp.com/",
     repo: "https://github.com/vivek1623/gupsup-now",
     tags: ["NodeJS", "Socket.io"],
-    image: IMG_PROJECT1,
+    image: IMG_PROJECT3,
   },
   {
     title: "PicSearch",
@@ -151,6 +151,6 @@ export const PORTFOLIO = [
     deployedUrl: "https://vivek1623.github.io/pic-search",
     repo: "https://github.com/vivek1623/pic-search",
     tags: ["ReactJS", "Ant-Design"],
-    image: IMG_PROJECT1,
+    image: IMG_PROJECT4,
   },
 ]

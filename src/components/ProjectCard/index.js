@@ -15,13 +15,13 @@ const ProjectCard = ({ project }) => {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
-      p={2}
+      p={{ xs: 4, sm: 6 }}
     >
       <Box component="img" src={project.image} alt="project" width={1} />
       <Typography variant="h4" fontWeight={600}>
         {project.title}
       </Typography>
-      <Typography align="center" color="text.secondary" mx={2}>
+      <Typography align="center" color="text.secondary">
         {project.description}
       </Typography>
       {project.tags?.length > 0 && (
