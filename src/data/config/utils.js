@@ -15,15 +15,29 @@ export const log = (...arg) => {
 }
 
 export const clearAllDataFromLocalStorage = () => {
-  localStorage.removeItem(LOCAL_STORAGE.IS_DARK_THEME)
+  localStorage.removeItem(LOCAL_STORAGE.PRIMARY)
+  localStorage.removeItem(LOCAL_STORAGE.SECONDARY)
+  localStorage.removeItem(LOCAL_STORAGE.THEME)
 }
 
 export const getDataFromLocalStorage = (key, defaultValue) => {
-  const data = localStorage.getItem(key)
-  return data && data !== undefined ? JSON.parse(data) : defaultValue
+  const dataStr = localStorage.getItem(key)
+  if (dataStr && dataStr !== undefined) {
+    const data = JSON.parse(dataStr)
+    if (new Date().getTime() > data.expiry) {
+      localStorage.removeItem(key)
+      return defaultValue
+    }
+    return data.value
+  }
+  return defaultValue
 }
 
-export const setDataInLocalStorage = (key, data) => {
+export const setDataInLocalStorage = (key, value, ttl = 3600000) => {
+  const data = {
+    value,
+    expiry: new Date().getTime() + ttl,
+  }
   const json_data = JSON.stringify(data)
   localStorage.setItem(key, json_data)
 }

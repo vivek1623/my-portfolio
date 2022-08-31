@@ -17,6 +17,8 @@ export const THEME_TYPE = {
 
 export const LOCAL_STORAGE = {
   THEME: "portfolioTheme",
+  PRIMARY: "themePrimary",
+  SECONDARY: "themeSecondary"
 }
 
 export const NAV_BAR = [

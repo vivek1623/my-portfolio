@@ -2,18 +2,18 @@ import { cyan, purple } from "@mui/material/colors"
 
 const dark = "#1f1f1f"
 
-const theme = {
+const theme = (primary = cyan["A400"], secondary = purple["A700"]) => ({
   palette: {
     primary: {
-      main: cyan["A400"],
+      main: primary,
     },
     secondary: {
-      main: purple["A700"],
+      main: secondary,
     },
     text: {
       primary: dark,
     },
   },
-}
+})
 
 export default theme

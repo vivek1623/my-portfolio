@@ -26,22 +26,41 @@ const Portfolio = lazy(() => import("../App/Portfolio"))
 const PageNotFound = lazy(() => import("../components/PageNotFound"))
 
 const themeType = getDataFromLocalStorage(LOCAL_STORAGE.THEME, THEME_TYPE.LIGHT)
+const primary = getDataFromLocalStorage(LOCAL_STORAGE.PRIMARY, undefined)
+const secondary = getDataFromLocalStorage(LOCAL_STORAGE.SECONDARY, undefined)
 
 const App = () => {
   const [themeMode, setThemeMode] = useState(themeType)
+  const [primaryColor, setPrimaryColor] = useState(primary)
+  const [secondaryColor, setSecondaryColor] = useState(secondary)
 
   const themeHandler = useMemo(
     () => ({
       changeThemeMode: (mode) => {
         if (mode) {
           setThemeMode(mode)
-          setDataInLocalStorage(LOCAL_STORAGE.THEME, mode)
+          setDataInLocalStorage(LOCAL_STORAGE.THEME, mode, 24 * 3600 * 1000)
+        }
+      },
+      changePrimaryColor: (color) => {
+        if (color) {
+          setPrimaryColor(color)
+          setDataInLocalStorage(LOCAL_STORAGE.PRIMARY, color)
+        }
+      },
+      changeSecondaryColor: (color) => {
+        if (color) {
+          setSecondaryColor(color)
+          setDataInLocalStorage(LOCAL_STORAGE.SECONDARY, color)
         }
       },
     }),
     []
   )
-  const theme = useMemo(() => createTheme(themeConfig[themeMode]), [themeMode])
+  const theme = useMemo(
+    () => createTheme(themeConfig[themeMode](primaryColor, secondaryColor)),
+    [themeMode, primaryColor, secondaryColor]
+  )
 
   return (
     <ThemeModeContext.Provider value={themeHandler}>

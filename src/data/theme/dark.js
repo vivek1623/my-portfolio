@@ -1,13 +1,13 @@
 import { cyan, deepPurple, yellow, blueGrey } from "@mui/material/colors"
 
-const theme = {
+const theme = (primary = cyan["A400"], secondary = deepPurple["A400"]) => ({
   palette: {
     mode: "dark",
     primary: {
-      main: cyan["A400"],
+      main: primary,
     },
     secondary: {
-      main: deepPurple["A400"],
+      main: secondary,
     },
     warning: {
       main: yellow["600"],
@@ -16,6 +16,6 @@ const theme = {
       default: blueGrey["900"],
     },
   },
-}
+})
 
 export default theme

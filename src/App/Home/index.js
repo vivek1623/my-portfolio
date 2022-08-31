@@ -10,6 +10,8 @@ import { APP_PAGE } from "../../data/config/constants"
 import { HOME } from "../../data/config/info"
 import { IMG_PROFILE } from "../../data/assets"
 
+import ThemeColorPicker from "../../components/ThemeColorPicker"
+
 const Home = () => {
   const [openColorPicker, setOpenColorPicker] = useState(false)
 
@@ -52,36 +54,15 @@ const Home = () => {
               <Box
                 className="port-animated port-fadeIn"
                 position="absolute"
-                bottom="101%"
+                top={50}
                 right={0}
-                boxShadow={1}
-                p={2}
-                borderRadius={1}
+                boxShadow={2}
+                p={1}
+                borderRadius={2}
                 backgroundColor="background.paper"
-                width={180}
+                width={220}
               >
-                <Box display="flex" justifyContent="space-between" mb={1}>
-                  <Typography>Primary</Typography>
-                  <Box
-                    width={60}
-                    height={25}
-                    borderRadius={1}
-                    backgroundColor="primary.main"
-                    border={2}
-                    sx={{ cursor: "pointer" }}
-                  />
-                </Box>
-                <Box display="flex" justifyContent="space-between">
-                  <Typography>Secondary</Typography>
-                  <Box
-                    width={60}
-                    height={25}
-                    borderRadius={1}
-                    backgroundColor="secondary.main"
-                    border={2}
-                    sx={{ cursor: "pointer" }}
-                  />
-                </Box>
+                <ThemeColorPicker />
               </Box>
             </Fade>
             <IconButton
