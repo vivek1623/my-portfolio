@@ -49,7 +49,7 @@ const Home = () => {
           touchEvent="onTouchStart"
           onClickAway={() => setOpenColorPicker(false)}
         >
-          <Box className="">
+          <Box>
             <Fade in={openColorPicker}>
               <Box
                 className="port-animated port-fadeIn"
@@ -91,7 +91,7 @@ const Home = () => {
         />
       </Box>
 
-      <Box px={2} m={{ sm: 2 }}>
+      <Box px={2} m={{ sm: 2 }} >
         <Typography variant="h3" fontWeight={600}>
           Hi, I'm{" "}
           <Typography
