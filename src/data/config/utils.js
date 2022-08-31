@@ -22,15 +22,25 @@ export const clearAllDataFromLocalStorage = () => {
 
 export const getDataFromLocalStorage = (key, defaultValue) => {
   const dataStr = localStorage.getItem(key)
-  if (dataStr && dataStr !== undefined) {
-    const data = JSON.parse(dataStr)
-    if (new Date().getTime() > data.expiry) {
-      localStorage.removeItem(key)
-      return defaultValue
+  try {
+    if (dataStr && dataStr !== undefined) {
+      const data = JSON.parse(dataStr)
+      if (!(data.expiry && data.value)) {
+        clearAllDataFromLocalStorage()
+        return defaultValue
+      }
+      if (new Date().getTime() > data.expiry) {
+        localStorage.removeItem(key)
+        return defaultValue
+      }
+      return data.value
     }
-    return data.value
+    return defaultValue
+  } catch (error) {
+    log("ERROR", error)
+    clearAllDataFromLocalStorage()
+    return defaultValue
   }
-  return defaultValue
 }
 
 export const setDataInLocalStorage = (key, value, ttl = 3600000) => {
