@@ -1,13 +1,18 @@
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import IconButton from "@mui/material/IconButton"
+import ColorLensIcon from "@mui/icons-material/ColorLens"
+import ClickAwayListener from "@mui/material/ClickAwayListener"
+import Fade from "@mui/material/Fade"
 
 import { APP_PAGE } from "../../data/config/constants"
 import { HOME } from "../../data/config/info"
 import { IMG_PROFILE } from "../../data/assets"
 
 const Home = () => {
+  const [openColorPicker, setOpenColorPicker] = useState(false)
+
   useEffect(() => {
     document.title = APP_PAGE.HOME
   }, [])
@@ -22,9 +27,7 @@ const Home = () => {
       minHeight="calc(100vh - 175px)"
     >
       <Box
-        alt="Profile Pic"
-        component="img"
-        src={IMG_PROFILE}
+        className="port-hoverableWrapper"
         width={{ xs: "35vh", md: "40vh" }}
         height={{ xs: "35vh", md: "40vh" }}
         maxWidth={{ xs: "300px", md: "350px" }}
@@ -33,11 +36,80 @@ const Home = () => {
         p={2}
         m={{ xs: 2, sm: 3, md: 4 }}
         boxShadow={5}
+        position="relative"
         sx={{
           backgroundImage: (theme) =>
             `-webkit-linear-gradient(139deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
         }}
-      />
+      >
+        <ClickAwayListener
+          mouseEvent="onMouseDown"
+          touchEvent="onTouchStart"
+          onClickAway={() => setOpenColorPicker(false)}
+        >
+          <Box className="">
+            <Fade in={openColorPicker}>
+              <Box
+                className="port-animated port-fadeIn"
+                position="absolute"
+                bottom="101%"
+                right={0}
+                boxShadow={1}
+                p={2}
+                borderRadius={1}
+                backgroundColor="background.paper"
+                width={180}
+              >
+                <Box display="flex" justifyContent="space-between" mb={1}>
+                  <Typography>Primary</Typography>
+                  <Box
+                    width={60}
+                    height={25}
+                    borderRadius={1}
+                    backgroundColor="primary.main"
+                    border={2}
+                    sx={{ cursor: "pointer" }}
+                  />
+                </Box>
+                <Box display="flex" justifyContent="space-between">
+                  <Typography>Secondary</Typography>
+                  <Box
+                    width={60}
+                    height={25}
+                    borderRadius={1}
+                    backgroundColor="secondary.main"
+                    border={2}
+                    sx={{ cursor: "pointer" }}
+                  />
+                </Box>
+              </Box>
+            </Fade>
+            <IconButton
+              size="small"
+              className={`port-animated port-zoomIn ${
+                openColorPicker ? "" : "port-onWrapperHoverHidden"
+              }`}
+              sx={{
+                position: "absolute",
+                right: 15,
+                top: 15,
+                color: "common.white",
+              }}
+              onClick={() => setOpenColorPicker((prev) => !prev)}
+            >
+              <ColorLensIcon />
+            </IconButton>
+          </Box>
+        </ClickAwayListener>
+        <Box
+          alt="Profile Pic"
+          component="img"
+          src={IMG_PROFILE}
+          width={1}
+          borderRadius="15%"
+        />
+      </Box>
+
       <Box px={2} m={{ sm: 2 }}>
         <Typography variant="h3" fontWeight={600}>
           Hi, I'm{" "}

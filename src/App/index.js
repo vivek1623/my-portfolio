@@ -5,8 +5,9 @@ import CssBaseline from "@mui/material/CssBaseline"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import CircularProgress from "@mui/material/CircularProgress"
-
 import Link from "@mui/material/Link"
+
+import "./index.scss"
 
 import { LOCAL_STORAGE, THEME_TYPE, ROUTE_PATH } from "../data/config/constants"
 import {

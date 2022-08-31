@@ -1,0 +1,86 @@
+//================================== MIXINS ========================================
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+//================================== KEYFRAMES ========================================
+
+@include keyframes(port-fadeIn) {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@include keyframes(port-zoomIn) {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+//================================== CLASS NAMES ========================================
+
+.port-hoverableWrapper {
+  .port-onWrapperHoverHidden {
+    display: none;
+  }
+  &:hover {
+    .port-onWrapperHoverHidden {
+      display: block;
+    }
+  }
+}
+
+.port-animated {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.port-infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.port-fadeIn {
+  @include animation(port-fadeIn 1s);
+}
+
+.port-zoomIn {
+  @include animation(port-zoomIn 1s);
+}
