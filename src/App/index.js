@@ -110,7 +110,7 @@ const App = () => {
               mb={1}
               sx={{ color: "text.secondary", fontSize: "0.6rem" }}
             >
-              {`version ${process.env.REACT_APP_VERSION}`}
+              {`🚀 version ${process.env.REACT_APP_VERSION}`}
             </Typography>
           </Box>
         </Router>
