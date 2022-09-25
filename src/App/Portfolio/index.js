@@ -1,8 +1,6 @@
 import { useEffect } from "react"
 import Grid from "@mui/material/Grid"
 
-import 'react-lazy-load-image-component/src/effects/blur.css'
-
 import { PORTFOLIO } from "../../data/config/info"
 import { APP_PAGE } from "../../data/config/constants"
 
