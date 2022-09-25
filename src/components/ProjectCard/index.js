@@ -17,7 +17,13 @@ const ProjectCard = ({ project }) => {
       alignItems={"center"}
       p={{ xs: 4, sm: 6 }}
     >
-      <Box component="img" src={project.image} alt="project" width={1} />
+      <Box
+        component="img"
+        src={project.image}
+        alt="project"
+        width={1}
+        loading="lazy"
+      />
       <Typography variant="h4" fontWeight={600}>
         {project.title}
       </Typography>
