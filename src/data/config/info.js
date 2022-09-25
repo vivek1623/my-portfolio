@@ -12,6 +12,7 @@ import {
   IMG_PROJECT5,
   IMG_PROJECT6,
   IMG_PROJECT7,
+  IMG_PROJECT8,
 } from "../assets"
 
 export const HOME = {
@@ -154,14 +155,6 @@ export const PORTFOLIO = [
     image: IMG_PROJECT3,
   },
   {
-    title: "Canvas Form",
-    description: "A canvas form with highlighter and marker features",
-    deployedUrl: "https://canvas-form.vercel.app",
-    repoUrl: "https://github.com/vivek1623/canvas-form",
-    tags: ["ReactJS", "Material UI"],
-    image: IMG_PROJECT7,
-  },
-  {
     title: "PicSearch",
     description: "A web application to search any image",
     deployedUrl: "https://vivek1623.github.io/pic-search",
@@ -184,5 +177,22 @@ export const PORTFOLIO = [
     repoUrl: "",
     tags: ["ReactJS", "Ant-Design"],
     image: IMG_PROJECT6,
+  },
+  {
+    title: "Canvas Form",
+    description: "A canvas form with highlighter and marker features",
+    deployedUrl: "https://canvas-form.vercel.app",
+    repoUrl: "https://github.com/vivek1623/canvas-form",
+    tags: ["ReactJS", "Material UI"],
+    image: IMG_PROJECT7,
+  },
+  {
+    title: "Weather App",
+    description:
+      "This app will provide you basic weather information of any location",
+    deployedUrl: "https://weather-1623.herokuapp.com",
+    repoUrl: "https://github.com/vivek1623/weather-app",
+    tags: ["NodeJS", "Express", "Hbs"],
+    image: IMG_PROJECT8,
   },
 ]
