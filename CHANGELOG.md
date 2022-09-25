@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/vivek1623/my-portfolio/compare/v1.2.1...v1.3.0) (2022-09-25)
+
+
+### Features
+
+* **portfolio:** canvas-form added ([a2dee28](https://github.com/vivek1623/my-portfolio/commit/a2dee28fd84e0e2b753bf6274af0da35efa1630a))
+
 ### [1.2.1](https://github.com/vivek1623/my-portfolio/compare/v1.2.0...v1.2.1) (2022-09-25)
 
 
