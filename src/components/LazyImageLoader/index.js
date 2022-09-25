@@ -4,7 +4,13 @@ import Box from "@mui/material/Box"
 
 import useIntersection from "../../data/hooks/useIntersection"
 
-const LazyImageLoader = ({ src, placeholderSrc, alt, containerSx }) => {
+const LazyImageLoader = ({
+  src,
+  placeholderSrc,
+  alt,
+  containerSx,
+  ...rest
+}) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
 
@@ -21,7 +27,6 @@ const LazyImageLoader = ({ src, placeholderSrc, alt, containerSx }) => {
       ref={imgRef}
       width={1}
       position="relative"
-      minHeight={300}
       sx={containerSx}
     >
       {isInView && (
@@ -33,6 +38,7 @@ const LazyImageLoader = ({ src, placeholderSrc, alt, containerSx }) => {
             width={1}
             display={isLoaded ? "block" : "none"}
             onLoad={handleOnLoad}
+            {...rest}
           />
           <Box
             component="img"
@@ -40,10 +46,7 @@ const LazyImageLoader = ({ src, placeholderSrc, alt, containerSx }) => {
             alt={alt}
             width={1}
             display={isLoaded ? "none" : "block"}
-            sx={{
-              transition: "opacity 1s ease-in-out",
-              opacity: isLoaded ? 0 : 1,
-            }}
+            {...rest}
           />
         </>
       )}

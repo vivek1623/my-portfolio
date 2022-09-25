@@ -22,9 +22,9 @@ const ProjectCard = ({ project }) => {
       p={{ xs: 4, sm: 6 }}
     >
       <LazyImageLoader
+        containerSx={{ minHeight: 320 }}
         placeholderSrc={IMG_PROJECT_PLACEHOLDER}
         src={project.image}
-        style={{ minHeight: 500 }}
         alt={project.title}
       />
       <Typography variant="h4" fontWeight={600}>
@@ -51,16 +51,27 @@ const ProjectCard = ({ project }) => {
         >
           LIVE DEMO
         </Button>
-        <Button
-          color="inherit"
-          variant="outlined"
-          startIcon={<CodeIcon />}
-          href={project.repoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          SOURCE CODE
-        </Button>
+        {project.repoUrl ? (
+          <Button
+            color="inherit"
+            variant="outlined"
+            startIcon={<CodeIcon />}
+            href={project.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            SOURCE CODE
+          </Button>
+        ) : (
+          <Button
+            color="inherit"
+            variant="outlined"
+            startIcon={<CodeIcon />}
+            disabled
+          >
+            PRIVATE REPO
+          </Button>
+        )}
       </Stack>
     </Box>
   )

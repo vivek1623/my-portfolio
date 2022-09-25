@@ -4,7 +4,14 @@ import InstagramIcon from "@mui/icons-material/Instagram"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import TwitterIcon from "@mui/icons-material/Twitter"
 
-import { IMG_PROJECT1, IMG_PROJECT2, IMG_PROJECT3, IMG_PROJECT4 } from "../assets"
+import {
+  IMG_PROJECT1,
+  IMG_PROJECT2,
+  IMG_PROJECT3,
+  IMG_PROJECT4,
+  IMG_PROJECT5,
+  IMG_PROJECT6,
+} from "../assets"
 
 export const HOME = {
   firstName: "Vivek",
@@ -124,7 +131,7 @@ export const PORTFOLIO = [
     title: "My Portfolio",
     description: "A simple portfolio to show my basic information",
     deployedUrl: "https://my-portfolio-vivek23.vercel.app",
-    repo: "https://github.com/vivek1623/my-portfolio",
+    repoUrl: "https://github.com/vivek1623/my-portfolio",
     tags: ["ReactJS", "Material UI"],
     image: IMG_PROJECT1,
   },
@@ -133,7 +140,7 @@ export const PORTFOLIO = [
     description:
       "A vehicle Rental application, which provide user to book bike on rent.",
     deployedUrl: "https://rento-hub-fe.vercel.app/",
-    repo: "https://github.com/vivek1623/rento-hub-fe",
+    repoUrl: "https://github.com/vivek1623/rento-hub-fe",
     tags: ["ReactJS", "NodeJS", "Ant-Design"],
     image: IMG_PROJECT2,
   },
@@ -141,7 +148,7 @@ export const PORTFOLIO = [
     title: "GupSup Now",
     description: "A real-time group messaging application",
     deployedUrl: "https://gupsupnow.herokuapp.com/",
-    repo: "https://github.com/vivek1623/gupsup-now",
+    repoUrl: "https://github.com/vivek1623/gupsup-now",
     tags: ["NodeJS", "Socket.io"],
     image: IMG_PROJECT3,
   },
@@ -149,8 +156,24 @@ export const PORTFOLIO = [
     title: "PicSearch",
     description: "A web application to search any image",
     deployedUrl: "https://vivek1623.github.io/pic-search",
-    repo: "https://github.com/vivek1623/pic-search",
+    repoUrl: "https://github.com/vivek1623/pic-search",
     tags: ["ReactJS", "Ant-Design"],
     image: IMG_PROJECT4,
+  },
+  {
+    title: "Message Types",
+    description: "A npm library for reusable react components",
+    deployedUrl: "https://www.npmjs.com/package/message-types",
+    repoUrl: "",
+    tags: ["ReactJS", "Ant-Design"],
+    image: IMG_PROJECT5,
+  },
+  {
+    title: "React Message Types",
+    description: "A npm library for reusable react components",
+    deployedUrl: "https://www.npmjs.com/package/react-message-types",
+    repoUrl: "",
+    tags: ["ReactJS", "Ant-Design"],
+    image: IMG_PROJECT6,
   },
 ]
