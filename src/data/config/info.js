@@ -11,6 +11,7 @@ import {
   IMG_PROJECT4,
   IMG_PROJECT5,
   IMG_PROJECT6,
+  IMG_PROJECT7,
 } from "../assets"
 
 export const HOME = {
@@ -151,6 +152,14 @@ export const PORTFOLIO = [
     repoUrl: "https://github.com/vivek1623/gupsup-now",
     tags: ["NodeJS", "Socket.io"],
     image: IMG_PROJECT3,
+  },
+  {
+    title: "Canvas Form",
+    description: "A canvas form with highlighter and marker features",
+    deployedUrl: "https://canvas-form.vercel.app",
+    repoUrl: "https://github.com/vivek1623/canvas-form",
+    tags: ["ReactJS", "Material UI"],
+    image: IMG_PROJECT7,
   },
   {
     title: "PicSearch",
