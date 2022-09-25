@@ -97,13 +97,20 @@ const App = () => {
             </Box>
             <Typography
               align="center"
-              my={1}
+              mt={1}
               sx={{ color: "text.secondary", fontSize: "0.75rem" }}
             >
               created with &hearts; by{" "}
               <Link href="#" color="inherit" underline="hover">
                 Vivek Vaibhav
               </Link>
+            </Typography>
+            <Typography
+              align="center"
+              mb={1}
+              sx={{ color: "text.secondary", fontSize: "0.6rem" }}
+            >
+              {`version ${process.env.REACT_APP_VERSION}`}
             </Typography>
           </Box>
         </Router>
