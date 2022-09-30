@@ -118,6 +118,16 @@ export const ABOUT = [
     ],
   },
   {
+    title: "achievements",
+    data: [
+      { primary: "vivek $", secondary: "cd ../achievements" },
+      { secondary: "- District Second Topper in Class 10th" },
+      { secondary: "- College Topper in Class 12th" },
+      { secondary: "- AIR 12143 in AIEEE" },
+      { secondary: "- AIR 5040 (Top 7%) in 10th NIIT National IT Aptitude Test" },
+    ],
+  },
+  {
     title: "hobbies/interests",
     data: [
       { primary: "vivek $", secondary: "cd hobbies/interests" },
