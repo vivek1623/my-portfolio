@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/vivek1623/my-portfolio/compare/v1.4.0...v1.5.0) (2022-09-30)
+
+
+### Features
+
+* **portfolio:** new projects added ([259a1de](https://github.com/vivek1623/my-portfolio/commit/259a1de61a3c7677b300f247cb8eb955ff60cb51))
+
 ## [1.4.0](https://github.com/vivek1623/my-portfolio/compare/v1.3.0...v1.4.0) (2022-09-25)
 
 
