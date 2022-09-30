@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.2](https://github.com/vivek1623/my-portfolio/compare/v1.5.1...v1.5.2) (2022-09-30)
+
+
+### Styling
+
+* **info:** project name capitalize ([ceffd25](https://github.com/vivek1623/my-portfolio/commit/ceffd25290ced6923e0552479d77c211d5311668))
+
 ### [1.5.1](https://github.com/vivek1623/my-portfolio/compare/v1.5.0...v1.5.1) (2022-09-30)
 
 
