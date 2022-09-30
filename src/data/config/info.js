@@ -216,7 +216,7 @@ export const PORTFOLIO = [
     image: IMG_PROJECT9,
   },
   {
-    title: "Chatbot dashboard",
+    title: "Chatbot Dashboard",
     description:
       "A Dashboard application to manage and monitor chatbot",
     deployedUrl: "https://cd2-dev.oriserve.com/auth/login",
