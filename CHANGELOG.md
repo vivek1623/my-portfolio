@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/vivek1623/my-portfolio/compare/v1.5.0...v1.5.1) (2022-09-30)
+
+
+### Docs
+
+* **about:** acievements sections added ([7ff8af5](https://github.com/vivek1623/my-portfolio/commit/7ff8af5c016301f538a4c71884b5405443111c56))
+
 ## [1.5.0](https://github.com/vivek1623/my-portfolio/compare/v1.4.0...v1.5.0) (2022-09-30)
 
 
