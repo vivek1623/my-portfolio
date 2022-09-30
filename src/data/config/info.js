@@ -13,6 +13,8 @@ import {
   IMG_PROJECT6,
   IMG_PROJECT7,
   IMG_PROJECT8,
+  IMG_PROJECT9,
+  IMG_PROJECT10,
 } from "../assets"
 
 export const HOME = {
@@ -194,5 +196,22 @@ export const PORTFOLIO = [
     repoUrl: "https://github.com/vivek1623/weather-app",
     tags: ["NodeJS", "Express", "Hbs"],
     image: IMG_PROJECT8,
+  },
+  {
+    title: "Chatbot",
+    description: "A reat time AI and Human based chatbot application",
+    deployedUrl: "https://dms-dev.oriserve.com/chatbot",
+    repoUrl: "",
+    tags: ["ReactJS", "Ant Design", "Socket.io"],
+    image: IMG_PROJECT9,
+  },
+  {
+    title: "Chatbot dashboard",
+    description:
+      "A Dashboard application to manage and monitor chatbot",
+    deployedUrl: "https://cd2-dev.oriserve.com/auth/login",
+    repoUrl: "",
+    tags: ["ReactJS", "Ant Design", "BizChartz", "Socket.io"],
+    image: IMG_PROJECT10,
   },
 ]
