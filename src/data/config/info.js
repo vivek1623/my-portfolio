@@ -98,14 +98,14 @@ export const ABOUT = [
       { primary: "vivek $", secondary: "cd ../skills/tools" },
       { primary: "skills/tools (main) $", secondary: "ls" },
       { primary: "Proficient With" },
-      { secondary: "ReactJs" },
-      { secondary: "Redux" },
-      { secondary: "ReactNative" },
-      { secondary: "NodeJs" },
-      { secondary: "HTML" },
-      { secondary: "CSS" },
+      { secondary: "- ReactJs" },
+      { secondary: "- Redux" },
+      { secondary: "- ReactNative" },
+      { secondary: "- NodeJs" },
+      { secondary: "- HTML" },
+      { secondary: "- CSS" },
       { primary: "Exposed To" },
-      { secondary: "Redis" },
+      { secondary: "- Redis" },
     ],
   },
   {
@@ -118,13 +118,26 @@ export const ABOUT = [
     ],
   },
   {
+    title: "education",
+    data: [
+      { primary: "vivek $", secondary: "cd ../education" },
+      { primary: "education (main) $", secondary: "ls" },
+      { primary: "NIT Calicut", secondary: "B Tech 2016" },
+      { primary: "A U Inter College Murliganj", secondary: "12th" },
+      { primary: "B H School Bhawanipur", secondary: "10th" },
+    ],
+  },
+  {
     title: "achievements",
     data: [
       { primary: "vivek $", secondary: "cd ../achievements" },
-      { secondary: "- District Second Topper in Class 10th" },
+      { primary: "achievements (main) $", secondary: "ls" },
+      { secondary: "- District 2nd Topper in Class 10th" },
       { secondary: "- College Topper in Class 12th" },
       { secondary: "- AIR 12143 in AIEEE" },
-      { secondary: "- AIR 5040 (Top 7%) in 10th NIIT National IT Aptitude Test" },
+      {
+        secondary: "- AIR 5040 (Top 7%) in 10th NIIT National IT Aptitude Test",
+      },
     ],
   },
   {
@@ -217,8 +230,7 @@ export const PORTFOLIO = [
   },
   {
     title: "Chatbot Dashboard",
-    description:
-      "A Dashboard application to manage and monitor chatbot",
+    description: "A Dashboard application to manage and monitor chatbot",
     deployedUrl: "https://cd2-dev.oriserve.com/auth/login",
     repoUrl: "",
     tags: ["ReactJS", "Ant Design", "BizChartz", "Socket.io"],
