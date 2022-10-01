@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.3](https://github.com/vivek1623/my-portfolio/compare/v1.5.2...v1.5.3) (2022-10-01)
+
+
+### Bug Fixes
+
+* **info:** education details added in about sections ([5c77f8f](https://github.com/vivek1623/my-portfolio/commit/5c77f8fef2ecbb3eaa0dd38bb5e90db4e5c0f695))
+
 ### [1.5.2](https://github.com/vivek1623/my-portfolio/compare/v1.5.1...v1.5.2) (2022-09-30)
 
 
