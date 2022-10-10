@@ -27,7 +27,7 @@ const ProjectCard = ({ project }) => {
         src={project.image}
         alt={project.title}
       />
-      <Typography variant="h4" fontWeight={600}>
+      <Typography variant="h4" fontWeight={600} mt={1}>
         {project.title}
       </Typography>
       <Typography align="center" color="text.secondary">
