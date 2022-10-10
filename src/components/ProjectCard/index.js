@@ -22,7 +22,7 @@ const ProjectCard = ({ project }) => {
       p={{ xs: 4, sm: 6 }}
     >
       <LazyImageLoader
-        containerSx={{ minHeight: 320 }}
+        containerSx={{ minHeight: 280 }}
         placeholderSrc={IMG_PROJECT_PLACEHOLDER}
         src={project.image}
         alt={project.title}
